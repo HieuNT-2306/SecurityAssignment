@@ -38,7 +38,7 @@ hex_strings = [
   
   "32510ba9babebbbefd001547a810e67149caee11d945cd7fc81a05e9f85aac650e9052ba6a8cd8257bf14d13e6f0a803b54fde9e77472dbff89d71b57bddef121336cb85ccb8f3315f4b52e301d16e9f52f904",
 ]
-for i, hex_string in enumerate(hex_strings, start=0): 
+for i, hex_string in enumerate(hex_strings, start=1): 
     xor_result = xor_hex(hex_string, key)
     print(f"{i}){xor_result}")
 
@@ -55,8 +55,7 @@ def xor_hex_with_ascii(hex_string, ascii_string):
     
     return result_hex
 
-input_hex = hex_strings[6]
-input_ascii = "there are two types of cyptography: one that allows the Government to use brute force to break the code, and one that requires the Government to use brute force to break the code."
+input_hex = hex_strings[1]
+input_ascii = "euler "
 result = xor_hex_with_ascii(input_hex, input_ascii)
 print(f"New key: {result}")
-
